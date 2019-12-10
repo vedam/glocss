@@ -1,0 +1,70 @@
+/*
+-----------------------------------------------
+  misc – 1.1.0
+  - commonly used helpers
+-----------------------------------------------
+*/
+
+.border   { border: var(--border-w) solid currentColor }
+.rounded  { border-radius: var(--border-r, .4rem) }
+.mute     { opacity: var(--mute, .55) }
+.shadow   { box-shadow: var(--shadow) }
+/* .blend    { mix-blend-mode: var(--blend, multiply) } */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-full {
+  width: 100vw;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.w100, .w75, .w50  { width: 100% }
+
+[no-select] {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+[hidden]      { display: none !important }
+[has-events]  { pointer-events: all !important }
+[transparent] { background: transparent !important }
+
+
+/*  gradients ------------------------------ */
+.linear-grad {
+  --clr1: var(--prime);
+  --clr2: var(--second);
+  background: linear-gradient(
+    135deg, var(--clr1) 8%, var(--clr2) 95%
+  )
+}
+
+.linear-grad.light {
+  --clr1: hsl(190,8%,98%);
+  --clr2: hsl(190,8%,84%);
+}
+
+/*  media-queries -------------------------- */
+@media screen and (max-width: 767px) {
+  .mobile-show { display: initial !important }
+  .mobile-hide { display: none !important }
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-show { display: initial !important }
+  .desktop-hide { display: none !important }
+  .w100 { width: 100% }
+  .w75  { width: 75% }
+  .w50  { width: 50% }
+}
+

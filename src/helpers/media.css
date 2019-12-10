@@ -1,0 +1,44 @@
+/*
+-----------------------------------------------
+  media
+  NOTE
+  .lazy, .loading and .loaded-classes are
+  used by lazyload-component lazysizes
+-----------------------------------------------
+*/
+
+.cover, video { width: 100%; object-fit: cover }
+.contain      { width: 100%; object-fit: contain }
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+/*  background-image */
+[bgimg] {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/*  aspect-ratio – https://codepen.io/noamr/pen/mpamVN */
+.ratio     { display: grid }
+.ratio > * { grid-area: 1 / 1 / 2 / 2 }
+
+/*  lazysizes */
+.lazy, .loading {
+  opacity: 0;
+  transform: scale(0.95, 0.95);
+}
+
+.loaded {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all .3s var(--out-back, cubic-bezier(0.175, 0.885, 0.32, 1.275));
+}
+
+/*  opinionated styles */
+.polaroid {
+  box-shadow: inset 0 0 0 1.2rem white, var(--shadow);
+  padding: 1.2rem 3rem;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@vedam/glocss",
+  "version": "1.0.0",
+  "description": "global css-setup and helper-classes",
+  "browserslist": [
+    "> 3%",
+    "not ie <= 9"
+  ],
+  "scripts": {
+    "dev": "taskr",
+    "build": "taskr build"
+  },
+  "devDependencies": {
+    "@taskr/clear": "^1.1.0",
+    "@taskr/concat": "^1.1.0",
+    "@taskr/esnext": "^1.1.0",
+    "@taskr/postcss": "^1.1.2",
+    "@taskr/watch": "^1.1.0",
+    "cssnano": "^4.1.10",
+    "taskr": "^1.1.0"
+  },
+  "keywords": [
+    "css",
+    "helpers",
+    "boilerplate"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedam/glocss.git"
+  },
+  "author": "vedam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vedam/glocss/issues"
+  },
+  "homepage": "https://github.com/vedam/glocss#readme"
+}

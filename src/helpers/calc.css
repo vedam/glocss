@@ -1,0 +1,30 @@
+/*
+-----------------------------------------------
+  constants and calc – 1.1.1
+-----------------------------------------------
+*/
+
+:root {
+  --33: calc(100% / 3);      /* exactly 33% */
+  --66: calc(100% / 3 * 2);  /* exactly 66% */
+  --bp: xs mobile;           /* breakpoint  */
+  
+  /* common easings */
+  --in-cubic:    cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --out-cubic:   cubic-bezier(0.215, 0.61, 0.355, 1);
+  --inout-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --in-expo:     cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --out-expo:    cubic-bezier(0.19, 1, 0.22, 1);
+  --inout-expo:  cubic-bezier(1, 0, 0, 1);
+
+  --in-back:     cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --out-back:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --inout-back:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --shadow-1: 0 .6rem .6rem 0 rgba(0, 0, 0, .1),
+              0 .2rem 1rem 0 rgba(0, 0, 0, .12),
+              0 .4rem .2rem -.2rem rgba(0, 0, 0, .15);
+  --shadow-2: 0 .6rem 1rem 0 rgba(0, 0, 0, .06), 
+              0 .2rem .6rem -.2rem rgba(0, 0, 0, .15);
+}

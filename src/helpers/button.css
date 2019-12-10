@@ -1,0 +1,69 @@
+/*! global helpers – 1.1.1
+-----------------------------------------------
+*/
+
+/*  reset ---------------------------------- */
+.btn {
+  --bttn-h: 4rem;
+  --bttn-outline: .2rem;
+  --bttn-font: var(--font-ui);
+  --bttn-calc-h: calc(var(--bttn-h) - var(--bttn-outline) * 2);
+  --bttn-hover: linear-gradient(
+    to top, rgba(0,0,0,.14) 10%, rgba(0,0,0,.05)
+  );
+  --bttn-active: linear-gradient(
+    to top, rgba(255,255,255,.07), rgba(255,255,255,.07)
+  );
+
+  position: relative;
+  margin: 0 .8rem .8rem 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+  zoom: 1;
+  border: none transparent;
+	font: 1.3rem var(--bttn-font);
+	border-radius: var(--border-r);
+  color: currentColor;
+  letter-spacing: .03em;
+  cursor: pointer;
+}
+
+.btn:focus { outline: 0 }
+
+.btn[disabled],
+.btn:hover[disabled] {
+  opacity: .55;
+  pointer-events: none;
+  /* cursor: not-allowed; */
+}
+
+.btn > svg {
+  position: relative;
+  top: -.1rem;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+/*  default -------------------------------- */
+.btn {
+  min-height: var(--bttn-h);
+  line-height: var(--bttn-h);
+  padding: 0 1.6rem;
+  transition: all .1s;
+}
+
+.btn:hover  { background-image: var(--bttn-hover) }
+.btn:active {
+	mix-blend-mode: overlay;
+	background-image: var(--bttn-active)
+}
+
+/*  options -------------------------------- */
+.btn[outline] {
+  min-height: var(--bttn-calc-h);
+  line-height: var(--bttn-calc-h);
+  border: var(--bttn-outline) solid currentColor;
+  background-color: white;
+  color: currentColor;
+}

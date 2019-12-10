@@ -1,0 +1,39 @@
+/*
+-----------------------------------------------
+  grid – 1.1.1
+  - inspiration: see http://w3bits.com/css-masonry/
+-----------------------------------------------
+*/
+
+.grid {
+  --gap: 1.6rem;
+  --minmax: 20rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minmax), 1fr));
+}
+
+[class*='cols-'] { grid-column: span 1 }
+.rows-2 { grid-row: span 2 }
+.rows-3 { grid-row: span 3 }
+.rows-4 { grid-row: span 4 }
+
+@media screen and (min-width: 768px) {
+  .cols-2,
+  .cols-3,
+  .cols-4 { grid-column: span 2 }
+}
+
+@media screen and (min-width: 1024px) {
+  .cols-2 { grid-column: span 2 }
+  .cols-3,
+  .cols-4 { grid-column: span 3 }
+}
+
+@media screen and (min-width: 1440px) {
+  .cols-2 { grid-column: span 2 }
+  .cols-3 { grid-column: span 3 }
+  .cols-4 { grid-column: span 4 }
+}

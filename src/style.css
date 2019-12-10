@@ -1,0 +1,42 @@
+/*! shared styles – 1.1.2
+-----------------------------------------------
+*/
+
+body {
+  font: 300 var(--h4)/var(--lh) var(--font);
+}
+
+h1, h2 {
+  margin: 0 0 2.4rem;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 9em;
+  line-height: 1.01;
+}
+
+.btn {
+  font-size: var(--h6);
+  font-weight: 500;
+}
+
+tt, code, kbd, samp {
+	font: 300 var(--code)/1.7 var(--font-mono);
+}
+
+.legend {
+  font-family: var(--font-mono);
+  font-size: var(--h6);
+  margin: 1.6rem 0 6.4rem 0;
+}
+
+hr {
+  opacity: .2;
+  margin: var(--hr-distance) 0 4rem;
+  outline: 0;
+  border: 0;
+  border-top: var(--border-w) solid currentColor;
+}

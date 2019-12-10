@@ -1,0 +1,106 @@
+/*! critical – 1.1.1
+-----------------------------------------------
+*/
+
+.no-js { visibility: hidden; opacity: 0 }
+.js    { visibility: visible; opacity: 1 }
+
+@font-face {
+  font-family: 'plex';
+  font-display: optional;
+  src: url('fonts/ibm-plex-sans-v6-latin-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'plex';
+  font-display: optional;
+  src: url('fonts/ibm-plex-sans-v6-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fira-code';
+  font-display: optional;
+  src: url('fonts/fira-code-v7-latin-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  font vars ------------------------------ */
+body {
+  --font: sans-serif;
+  --font-alt: var(--font);
+  --font-mono: monospace;
+  --font-ui: var(--font-mono);
+}
+
+.fonts-loaded body {
+  --font: plex, sans-serif;
+  --font-mono: fira-code, monospace;
+}
+
+/*  base reset ----------------------------- */
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 62.5%;
+  -webkit-text-size-adjust: 62.5%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*  links ---------------------------------- */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a:hover { color: inherit }
+a:focus { outline: none }
+
+/*  typography ----------------------------- */
+body {
+  font: 300 var(--h4) / var(--lh) var(--font);
+  background-color: var(--back);
+  color: var(--text);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, dl {
+  margin-bottom: 0.8rem;
+}
+
+p, blockquote, li {
+  max-width: var(--lmax);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h6, .h6 { font-size: var(--h6) }
+h5, .h5 { font-size: var(--h5) }
+h4, .h4 { font-size: var(--h4) }
+h3, .h3 { font-size: var(--h3) }
+h2, .h2 { font-size: var(--h2) }
+h1, .h1 { font-size: var(--h1) }
+
+.b, b, strong {
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--flash);
+  color: white;
+}

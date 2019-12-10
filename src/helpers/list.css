@@ -1,0 +1,40 @@
+/*
+-----------------------------------------------
+  list – 1.1.0
+-----------------------------------------------
+*/
+
+ol, ul {
+	max-width: var(--lmax);
+	padding: 0;
+	list-style-position: inside;
+}
+
+ul { list-style-type: circle }
+li { margin: 0 0 .2rem }
+
+[reset], [stroke] { list-style-type: none }
+
+[stroke] { margin: 0 0 0 1.4rem }
+
+[stroke] > li { display: flex }
+
+[stroke] > li:before {
+  content: '';
+  /* display: inline-block; */
+  margin: 1.5rem 1rem 0 -1.4rem;
+	background: currentColor;
+	width: .5em;
+  height: .2rem;
+}
+
+[upper-alpha] { list-style-type: upper-alpha }
+[upper-roman] { list-style-type: upper-roman }
+
+/* if required
+[disc]        { list-style-type: disc }
+[circ]        { list-style-type: circle }
+[square]      { list-style-type: square }
+[zero]        { list-style-type: decimal-leading-zero }
+[lower-alpha] { list-style-type: lower-alpha }
+*/
