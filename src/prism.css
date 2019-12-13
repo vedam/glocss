@@ -6,13 +6,15 @@
 pre[class*='language-'] {
 	--background: hsla(0, 0%, 100%, .4);
 	--base:       #9b978b;
-	--comment:    #89aaca;
-	--keyword:    #5ba3d3;
+	--comment:    #5096db;
+	--keyword:    #4f8ac0;
 	--function:   #db794b;
 	--string:     #b69b61;
 	--number:     #86af75;
 	--tags:       var(--function);
-	--important:  var(--string);
+  --important:  var(--string);
+  
+  --code-padding: 2.4rem 3.2rem;
 }
 
 /*	type-base ------------------------------ */
@@ -35,7 +37,7 @@ pre[class*='language-'] {
 pre[class*='language-'] {
 	overflow: auto;
 	margin: 2.4rem 0;
-	padding: 3.2rem 4rem;
+	padding: var(--code-padding);
 	max-width: var(--code-w);
 	border-radius: var(--border-r);
 	box-shadow: 0.1rem 0.1rem 0.3rem rgba(68, 68, 68, 0.25) inset;

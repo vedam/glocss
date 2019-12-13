@@ -4,6 +4,12 @@
 -----------------------------------------------
 */
 
+[link] { color: black }
+
+[link]:hover, [aria-current] {
+  color: var(--flash)
+}
+
 [underline] {
   position: relative;
   user-select: none;
