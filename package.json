@@ -1,11 +1,8 @@
 {
   "name": "@vedam/glocss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "global css-setup and helper-classes",
-  "browserslist": [
-    "> 3%",
-    "not ie <= 9"
-  ],
+  "browserslist": [ "> 3%", "not ie <= 9" ],
   "scripts": {
     "dev": "taskr",
     "build": "taskr build"
