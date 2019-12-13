@@ -1,4 +1,4 @@
-#### glocss – 1.0.0
+#### glocss – 1.0.1
 
 These files are the css-starting-point in my projects.  
 Inspired by [lit](https://ajusa.github.io/lit/) | [atomiks](https://atomiks.github.io/30-seconds-of-css/#constant-width-to-height-ratio)  
@@ -31,6 +31,12 @@ npm i -D @vedam/glocss
 ---
 
 ##### changelog
+
+**1.0.1**  
+minor bug fixes
+- refine prism-colors
+- fix default links
+
 
 **1.0.0**
 
