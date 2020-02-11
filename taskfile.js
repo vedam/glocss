@@ -1,49 +1,49 @@
-const dist = "dist";
+const dist = 'dist'
 
 const postcss = {
   // map: { inline: true },
-  from: "undefined",
+  from: 'undefined',
   plugins: [
-    require("cssnano")({
+    require('cssnano')({
       calc: false,
       discardComments: false,
       zindex: false,
       autoprefixer: {
         remove: true,
-        add: true
-      }
-    })
-  ]
-};
+        add: true,
+      },
+    }),
+  ],
+}
 
 const concat = {
-  output: "global.css"
+  output: 'global.css',
   // map: true,
-};
+}
 
 export async function cleanup(task) {
-  await task.clear(dist);
+  await task.clear(dist)
 }
 
 export async function helpers(task) {
   await task
-    .source("src/helpers/*.css")
+    .source('src/helpers/*.css')
     .postcss(postcss)
     .concat(concat)
-    .target(dist);
+    .target(dist)
 }
 
 export async function standalone(task) {
   await task
-    .source("src/*.css")
+    .source('src/*.css')
     .postcss(postcss)
-    .target(dist);
+    .target(dist)
 }
 
 export default async function(task) {
-  await task.watch("src/**/*.css", ["standalone", "helpers"]);
+  await task.watch('src/**/*.css', ['standalone', 'helpers'])
 }
 
 export async function build(task) {
-  await task.serial(["cleanup", "standalone", "helpers"]);
+  await task.serial(['cleanup', 'standalone', 'helpers'])
 }
