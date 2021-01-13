@@ -1,3 +1,5 @@
+# I noticed it's not really helpful to split common css to a separate repo, so this will be deprecated soon
+
 #### glocss – 1.0.2
 
 These files are the css-starting-point in my projects.  
